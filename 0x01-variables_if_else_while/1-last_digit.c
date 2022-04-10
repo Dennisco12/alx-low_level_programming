@@ -5,7 +5,7 @@
  * main - entry point
  *
  * Description - prints a number and its last digit
- * return - always 0
+ * Return - 0
  */
 int main(void)
 {
