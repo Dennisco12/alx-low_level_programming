@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main: all other headers go here
+ * main: entry point
+ *
  * description: The function prints all the letters in
  * the alphabet.
  * return: 0
@@ -11,9 +12,10 @@
 
 int main(void)
 {
-	char d = 'a';
-	for (d = 'a'; d <= 'z'; d++) {
-	putchar(d);
+	int d = 'a';
+	for (d = 0; d < 26; d++) {
+	putchar('a' + d);
+	putchar('\n');
 	}
 
 	return (0);
