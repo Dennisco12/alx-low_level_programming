@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes here */
+/**
+ * more headers goes here 
+ */
 
 /* main - entry point */
 int main(void)
