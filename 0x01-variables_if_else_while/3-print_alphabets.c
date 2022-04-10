@@ -7,7 +7,7 @@
  *return: (0)
  */
 
-int main()
+int main(void)
 {
 	int d = 'a';
 	int e = 'A';
