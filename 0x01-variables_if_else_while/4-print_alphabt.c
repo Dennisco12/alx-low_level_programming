@@ -7,18 +7,19 @@
 
 int main(void)
 {
-	char d;
-	for (d = 'a'; d <= 'z'; d++)
-	{
-	if (d == 'q')
+char d;
+
+for (d = 'a'; d <= 'z'; d++)
+{
+if (d == 'q')
 continue;
 
-	else if (d == 'e')
+else if (d == 'e')
 continue;
 
-	putchar ('a' + d);
-	}
+putchar (d);
+}
 
-	putchar ('\n');
-	return (0);
+putchar ('\n');
+return (0);
 }
