@@ -2,9 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - entry point
- *
+ * main: entry point
  * Description - prints a number and its last digit
+ * along with whether it is greater than 5, equal to
+ * zero or less than 6
+ *
  * Return - 0
  */
 int main(void)
