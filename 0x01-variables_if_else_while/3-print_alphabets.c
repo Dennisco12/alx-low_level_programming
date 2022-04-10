@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-/*main: entry point
+/*
+ *main: entry point
  *
  *description: print lowercase then uppercase alphabet
  *return: (0)
@@ -13,7 +14,7 @@ int main()
 
 	for (d = 0; d < 26; d++)
 	putchar('a' + d);
-	for (e =0; e < 26; e++)
+	for (e = 0; e < 26; e++)
 	putchar ('A' + e);
 
 	putchar('\n');
