@@ -1,4 +1,4 @@
-#include <studlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 /*main: entry point
  *
@@ -6,7 +6,17 @@
  *return: (0)
  */
 
-void main()
+int main()
 {
-	char d;
-	char D;
+	int d = 'a';
+	int e = 'A';
+
+	for (d = 0; d < 26; d++)
+	putchar('a' + d);
+	for (e =0; e < 26; e++)
+	putchar ('A' + e);
+
+	putchar('\n');
+
+	return (0);
+}
