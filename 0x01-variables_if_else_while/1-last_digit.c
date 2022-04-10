@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* more headers goes here */
 
-/* main - views the last digit */
+/* main - entry point */
 int main(void)
 {
 	int n;
