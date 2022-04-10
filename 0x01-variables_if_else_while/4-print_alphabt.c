@@ -5,15 +5,20 @@
  * return: 0
  */
 
-int main(void);
-	/**
-	 * main - entry point
-	 */
-
+int main(void)
 {
-	int d = 'a';
-	for (d = 0; d < 26; && d != 4; d != 16; d++)
-	putchar ('a' + d);
+	char d;
+	for (d = 'a'; d <= 'z'; d++)
+	{
+	if (d == 'q')
+continue;
 
+	else if (d == 'e')
+continue;
+
+	putchar ('a' + d);
+	}
+
+	putchar ('\n');
 	return (0);
 }
