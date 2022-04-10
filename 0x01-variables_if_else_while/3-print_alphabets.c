@@ -8,6 +8,9 @@
  */
 
 int main(void)
+/*
+ * main: entry point
+ */
 {
 	int d = 'a';
 	int e = 'A';
