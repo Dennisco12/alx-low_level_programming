@@ -4,9 +4,9 @@
 
 int main(void)
 {
-	int d ='0';
+	int d = '0';
 	int e = 'a';
-	
+
 	for (d = 0; d <= 9; d++)
 	putchar ('0' + d);
 
