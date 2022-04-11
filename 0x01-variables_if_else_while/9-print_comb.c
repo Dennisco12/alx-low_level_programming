@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/** main - this is the entry point
+/**
+ * main - this is the entry point
  *
  * description - prints all possible combination of a si
  * ngle digit
