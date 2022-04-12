@@ -1,12 +1,23 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * main - entry point
- * description - prints puchar using putchar
- * return - always 0
+ *
+ * description - prints "putchar"
+ * return - always 0 at success
  */
 
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
+	return (0);
 }
