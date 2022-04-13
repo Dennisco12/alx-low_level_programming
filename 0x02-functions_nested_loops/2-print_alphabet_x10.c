@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - all entry point
- * print_alphabet_x10: prints alphabets in lower case 10 times
+ * print_alphabet_x10 - all entry point
+ * description: prints alphabets in lower case 10 times
  * Return: always 0
  */
 
