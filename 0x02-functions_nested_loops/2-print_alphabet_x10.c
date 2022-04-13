@@ -2,26 +2,21 @@
 
 /**
  * main - all entry point
- * description - prints alphabets in lower case 10 times
- *
- * return always 0
+ * print_alphabet_x10: prints alphabets in lower case 10 times
+ * Return: always 0
  */
 
 void print_alphabet_x10(void)
-
 {
-int d;
-int f;
+int d, f;
 
-d = '0';
+d = 0;
 while (d < 10)
 {
-
 for (f = 'a'; f <= 'z'; f++)
 {
 _putchar (f);
 }
-
 d++;
 _putchar ('\n');
 }
