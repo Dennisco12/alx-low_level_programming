@@ -14,6 +14,8 @@ void print_alphabet_x10(void)
 	int f;
 
 	f = 'a';
+	d == '0';
+	e == '0';
 while (d < 11)
 	_putchar('\n');
 	d++;
