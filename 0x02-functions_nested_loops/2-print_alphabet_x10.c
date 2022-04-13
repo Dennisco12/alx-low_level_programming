@@ -10,20 +10,19 @@
 void print_alphabet_x10(void)
 
 {
-int d, e;
+int d;
 int f;
 
-f = 'a';
 d = '0';
-e = '0';
-while (d < 11)
+while (d < 10)
+{
 
-while (e <= 1)
-for (f = 0; f < 26; f++)
-_putchar ('a' + f);
-e++;
+for (f = 'a'; f <= 'z'; f++)
+{
+_putchar (f);
+}
 
-_putchar ('\n');
 d++;
-
+_putchar ('\n');
+}
 }
