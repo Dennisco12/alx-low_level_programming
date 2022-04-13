@@ -21,6 +21,6 @@ _putchar('\n');
 d++;
 while (e <= 1)
 for (f = 0; f < 26; f++)
-_putchar ( 'a' + f);
+_putchar ('a' + f);
 e++;
 }
