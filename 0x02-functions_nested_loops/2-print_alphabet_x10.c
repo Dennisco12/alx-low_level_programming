@@ -21,7 +21,7 @@ while (d < 11)
 while (e <= 1)
 for (f = 0; f < 26; f++)
 _putchar ('a' + f);
-e++
+e++;
 
 _putchar ('\n');
 d++;
