@@ -7,15 +7,15 @@
  * Return: always 0
  */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
 	int i;
 
 	if (n > 98)
 	{
-		for (i = n; i > 97; i--);
+		for (i = n; i > 97; i--)
 		{
-			printf("d", i);
+			printf("%d", i);
 			if (i != 98)
 			{
 				printf(", ");
@@ -26,7 +26,7 @@ int print_to_98(int n)
 	{
 		for (i = n; i < 99; i++)
 		{
-			printf("d", i);
+			printf("%d", i);
 			if (i != 98)
 			{
 				printf(", ");
