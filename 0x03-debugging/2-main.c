@@ -3,6 +3,9 @@
 
 /**
 * main - prints the largest of 3 integers
+* @a: firat input
+* @b: second input
+* @c: third input
 * Return: 0
 */
 
