@@ -13,7 +13,7 @@ int a, b, c;
 	{
 		for (a = 0; a <= n; a++)
 		{
-			_putchar ('n');
+			_putchar (n);
 
 			for (b = 1; b <= n; b++)
 			{
