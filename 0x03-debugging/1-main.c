@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop, no increment on i.
+* @i: input value
 * Return: 0
 */
 
@@ -17,7 +18,6 @@ int main(void)
         {
                 putchar(i);
         }
-
         printf("Infinite loop avoided! \\o/\n");
 
         return (0);
