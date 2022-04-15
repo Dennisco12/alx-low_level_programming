@@ -6,7 +6,7 @@
  * main - all entry goes here
  *
  * description - prints all possible combination of two digits
- * return - always 0
+ * Return: always 0
  */
 
 int main(void)

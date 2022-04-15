@@ -7,7 +7,7 @@
  *
  * description - prints all possible combination of a si
  * ngle digit
- * return - always (0)
+ * Return: always (0)
  */
 
 int main(void)

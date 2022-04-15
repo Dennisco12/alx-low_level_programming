@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * This is where the headers end
- * return: 0
+ * main - entry point
+ * Description: print the alphabet except e and q
+ * Return: always 0
  */
 
 int main(void)

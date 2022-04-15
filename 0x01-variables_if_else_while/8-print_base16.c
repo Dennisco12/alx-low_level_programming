@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <time.h>
 
+/**
+ * main - entry point
+ * description: print hexadecimal
+ * Return: always 0
+ */
+
 int main(void)
 {
 	int d = '0';

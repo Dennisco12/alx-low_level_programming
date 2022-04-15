@@ -4,7 +4,7 @@
 /**
  * main - all entry goes here
  * description - prints all possible combination of 4 digits
- * return - always 0
+ * Return: always 0
  */
 
 int main(void)

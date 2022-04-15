@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * main: entry point
+ * main - entry point
  *
  * description: The function prints all the letters in
  * the alphabet.
- * return: 0
+ * Return: 0
  */
 int main(void)
 {

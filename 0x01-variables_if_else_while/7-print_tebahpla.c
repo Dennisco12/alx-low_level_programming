@@ -3,10 +3,10 @@
 #include <time.h>
 
 /**
- * main: all entry goes here
+ * main - all entry goes here
  * description: prints out the alphabet but in a reversed order
  *
- * return: (0)
+ * Return: (0)
  */
 
 int main(void)
