@@ -2,11 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- *main - States whether a number is positive, negative or zero
- *
- *Return: Always 0.
+/**
+ * main - state the sign of a number
+ * Return: always 0
  */
+
 int main(void)
 {
 int n;
