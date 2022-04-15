@@ -2,7 +2,6 @@
 
 /**
  * print_numbers - entry point
- * @n: input value
  * Return: always 0
  */
 
