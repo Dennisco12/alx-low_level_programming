@@ -4,8 +4,8 @@
 /**
  * main - universal entry points
  *
- * description - prints all digits in base 10 using only the putchar function.
- * return - Always 0
+ * description: prints all digits in base 10 using only the putchar function.
+ * Return: Always 0
  */
 
 int main(void)

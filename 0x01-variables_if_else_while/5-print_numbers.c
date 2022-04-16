@@ -4,8 +4,8 @@
 /**
  * main - entry point;
  *
- * description - prints all the numbers in base 10
- * return - 0
+ * description: prints all the numbers in base 10
+ * Return: always 0
  */
 
 int main(void)
