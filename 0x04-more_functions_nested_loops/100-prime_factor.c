@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - entry point
+ * description: the code prints the largest prime factor of i
+ * Return: always 0
+ */
 
 int main(void)
 {
