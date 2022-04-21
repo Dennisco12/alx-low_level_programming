@@ -3,8 +3,6 @@
 /**
  * puts2 - function prints the first element, followed by the rhird and so on
  * @str: input pointer
- * @n: input value
- * @j: input value
  * return: 0
  */
 
