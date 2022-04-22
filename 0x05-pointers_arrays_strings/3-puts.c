@@ -2,7 +2,7 @@
 
 /**
  * _puts - function that prints a string to stdout
- * @a: number of elements
+ * @str: input string
  * Return: 0
  */
 
@@ -17,5 +17,4 @@ void _puts(char *str)
 		a++;
 	}
 	_putchar ('\n');
-	return;
 }
