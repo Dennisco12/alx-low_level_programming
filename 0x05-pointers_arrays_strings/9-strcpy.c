@@ -4,7 +4,7 @@
  * _strcpy - function that copies a string to a buffer
  * @dest: input string
  * @src: input string
- * return: 0
+ * return: dest
  */
 
 char *_strcpy(char *dest, char *src)
