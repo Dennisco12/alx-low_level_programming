@@ -2,7 +2,7 @@
 
 /**
  * print_rev - function that prints the reverse of a string
- * @i: number of elements
+ * @i: final order of elements
  * @s: input string
  * @n: intial order of elements
  * Return: 0
@@ -17,8 +17,8 @@ void print_rev(char *s)
 		n++;
 	{
 		for (i = n; i >= 0; i--)
-		_putchar (s[i]);
+			_putchar (s[i]);
 	}
 	_putchar ('\n');
-	return (0);
+	return;
 }
