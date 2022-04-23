@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * print_rev - function that prints a string in reverse
- * @i: input element in forward order
- * @j: elwments in reversed order
+ * @s: input array
  * Return: 0
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * _puts - function that prints a string to stdout
- * @n: input variable
+ * @str: input array
  */
 
 void _puts(char *str)

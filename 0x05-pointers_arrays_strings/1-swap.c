@@ -2,7 +2,8 @@
 
 /**
  * swap_int - a fuction that swaps the value of two integers
- * @c: used variable
+ * @a: used variable
+ * @b: used variable
  * Return: 0
  */
 
