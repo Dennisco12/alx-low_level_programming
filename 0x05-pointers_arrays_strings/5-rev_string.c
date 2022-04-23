@@ -2,8 +2,7 @@
 
 /**
  * rev_string - function that reverses a string
- * @i: input order
- * @j: reversed order
+ * @s: input string
  * Return: 0
  */
 
