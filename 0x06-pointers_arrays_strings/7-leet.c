@@ -24,5 +24,5 @@ char *leet(char *str)
 		}
 	}
 	n++;
-	return (str);
+	return (str[n]);
 }
