@@ -5,7 +5,6 @@
  * @str: the source string
  * Return: str
  */
-
 char *cap_string(char *str)
 {
 	int n, i;
@@ -13,9 +12,9 @@ char *cap_string(char *str)
 
 	n = 0;
 	if (str[n] >= 97 && str[n] <= 122)
-		{
-			str[n] = str[n] - 32;
-		}
+	{
+		str[n] = str[n] - 32;
+	}
 	n++;
 	while (str[n] != '\0')
 	{
