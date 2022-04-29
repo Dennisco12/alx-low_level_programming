@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_number - A function that identifies a prime number
+ * _evaluate - A function that identifies a prime number
  * @n: the input integer
  * @j: An iterative parameter
  * Return: 0 if not prime, 1 if otherwise
@@ -40,7 +40,7 @@ int is_prime_number(int n)
 
 	j = 2;
 
-	if (j < 2)
+	if (n < 2)
 	{
 		return (0);
 	}

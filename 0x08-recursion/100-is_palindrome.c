@@ -24,7 +24,7 @@ int _length(char *s)
 
 int p1(char *s, int l)
 {
-	if (l > 1)
+	if (l < 1)
 	{
 		return (1);
 	}
