@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - A function that prints the product of two numbers
@@ -11,14 +12,17 @@ int main(int argc, char *argv[])
 {
 	int mul;
 
+	int p, q;
+
+	p = atoi(argv[1]);
+	q = atoi(argv[2]);
 	if (argc == 3)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
+		mul = p * q;
 		printf("%d\n", mul);
 	}
-	else
-	{
-		printf("Error\n");
-	}
+	return (0);
+
+	printf("Error\n");
 	return (1);
 }
