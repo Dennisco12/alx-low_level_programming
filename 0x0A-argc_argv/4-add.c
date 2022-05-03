@@ -2,12 +2,12 @@
 
 /**
  * main - A function that prints the sum of positive integers
- * argc: argument count
- * argv: argument vector
+ * @argc: argument count
+ * @argv: argument vector
  * Return: 0
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int n, sum;
 

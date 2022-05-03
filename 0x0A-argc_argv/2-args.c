@@ -2,12 +2,12 @@
 
 /**
  * main - Function that prints all the arguments it recieves on new lines
- * argc: argument count
- * argv: argument vector
+ * @argc: argument count
+ * @argv: argument vector
  * Return: 0
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	(void) argv;
