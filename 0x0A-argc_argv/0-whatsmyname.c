@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - function that prints the name of its file
+ * main - function that prints its name
  * argc: argument count
  * argv: argument vector
  * Return: always 0
