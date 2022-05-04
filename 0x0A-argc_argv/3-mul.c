@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 	{
 		mul = p * q;
 		printf("%d\n", mul);
+		return (0);
 	}
-	return (0);
 
 	printf("Error\n");
 	return (1);
