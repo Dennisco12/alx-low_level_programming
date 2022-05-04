@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 			change += div;
 			cent -= (div * coins[count]);
 		}
-		count ++;
+		count++;
 	}
 	printf("%d\n", change);
 	return (0);
