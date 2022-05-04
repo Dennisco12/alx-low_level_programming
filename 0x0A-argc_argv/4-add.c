@@ -1,4 +1,29 @@
 #include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * check_digit - A function that checks for digits
+ * @str: The inputted string'
+ * Return: 0
+ */
+
+int check_digit(char *str)
+{
+	unsigned int count;
+
+	count = 0;
+	while (count < strlen(str))
+	{
+		if (!isdigit(str[count]))
+		{
+			return (0);
+		}
+		count++;
+	}
+	return (1);
+}
 
 /**
  * main - A function that prints the sum of positive integers
@@ -9,19 +34,24 @@
 
 int main(int argc, char *argv[])
 {
-	int n, sum;
+	int count, sum = 0;
+	int str_to_int;
 
-	sum = 0;
-
-	for (n = 1; n < argc; n++)
+	count = 1;
+	while (count < argc)
 	{
-		if (atoi(argv[n]) > 1)
+		if (check_digit(argv[count]))
 		{
-			sum += atoi(argv[n]);
+			str_to_int = atoi(argv[count]);
+			sum += str_to_int;
 		}
-		else if (argc == 1)
-			printf("0\n");
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+		count++;
 	}
 	printf("%d\n", sum);
-	return (1);
+	return (0);
 }
