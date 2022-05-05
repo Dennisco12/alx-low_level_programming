@@ -1,12 +1,13 @@
 #include "main.h"
 
-/**                                                      * isSpace - determines if character is a space or not
+/**
+ * isSpace - determines if character is a space or not
  * @c: input char
  * Return: 1 if true or 0 or not
  */
 int isSpace(char c)
 {
-        return (c == ' ');
+	return (c == ' ');
 }
 
 /**
@@ -16,21 +17,21 @@ int isSpace(char c)
  */
 int countWords(char *s)
 {
-        int wordOn = 0;
-        int words = 0;
+	int wordOn = 0;
+	int words = 0;
 
-        while (*s)
-        {
-                if (isSpace(*s) && wordOn)
+	while (*s)
+	{
+		if (isSpace(*s) && wordOn)
 			wordOn = 0;
 		else if (!isSpace(*s) && !wordOn)
 		{
 			wordOn = 1;
-                        words++;
-                }
-                s++;
-        }
-        return (words);
+			words++;
+		}
+		s++;
+	}
+	return (words);
 }
 
 /**
