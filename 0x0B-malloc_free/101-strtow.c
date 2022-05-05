@@ -9,18 +9,23 @@ int isSpace(char c)
         return (c == ' ');
 }
 
-/**                                                      * countWords - counts numbers of words in string
+/**
+ * countWords - counts numbers of words in string
  * @s: input string
  * Return: number of words
- */                                                     int countWords(char *s)                                 {
+ */
+int countWords(char *s)
+{
         int wordOn = 0;
         int words = 0;
 
         while (*s)
         {
-                if (isSpace(*s) && wordOn)                                      wordOn = 0;                                     else if (!isSpace(*s) && !wordOn)
-                {
-                        wordOn = 1;
+                if (isSpace(*s) && wordOn)
+			wordOn = 0;
+		else if (!isSpace(*s) && !wordOn)
+		{
+			wordOn = 1;
                         words++;
                 }
                 s++;
@@ -32,8 +37,15 @@ int isSpace(char c)
  * startIndex - returns first index of non-space char
  * @s: input string
  * @index: starting index
- * Return: index of first non-space char                 */                                                     int startIndex(char *s, int index)                      {                                                                                                                       while (isSpace(*(s + index)))                                   index++;
-        return (index);                                 }
+ * Return: index of first non-space char
+ */
+
+int startIndex(char *s, int index)
+{
+	while (isSpace(*(s + index)))
+		index++;
+	return (index);
+}
 
 	/**
 	 * endIndex - returns last index of non-space char
