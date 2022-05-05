@@ -1,5 +1,43 @@
 #include "main.h"
 
+/**                                                      * isSpace - determines if character is a space or not
+ * @c: input char
+ * Return: 1 if true or 0 or not
+ */
+int isSpace(char c)
+{
+        return (c == ' ');
+}
+
+/**                                                      * countWords - counts numbers of words in string
+ * @s: input string
+ * Return: number of words
+ */                                                     int countWords(char *s)                                 {
+        int wordOn = 0;
+        int words = 0;
+
+        while (*s)
+        {
+                if (isSpace(*s) && wordOn)                                      wordOn = 0;                                     else if (!isSpace(*s) && !wordOn)
+                {
+                        wordOn = 1;
+                        words++;
+                }
+                s++;
+        }
+        return (words);
+}
+
+/**
+ * startIndex - returns first index of non-space char
+ * @s: input string
+ * @index: starting index
+ * Return: index of first non-space char                 */                                                     int startIndex(char *s, int index)                      {                                                                                                                       while (isSpace(*(s + index)))                                   index++;
+        return (index);                                 }
+
+	/**                                                      * endIndex - returns last index of non-space char       * @s: input string                                      * @index: starting index                                * Return: index of last index of non-space char         */                                                     int endIndex(char *s, int index)                        {                                                               while (!isSpace(*(s + index)))
+                index++;                                        return (index);                                 }
+
 /**
  * strtow - splits a string into words
  * @str: string of words to be split
@@ -40,65 +78,4 @@ char **strtow(char *str)
 	}
 	ptr[i] = NULL;
 	return (ptr);
-}
-
-/**
- * isSpace - determines if character is a space or not
- * @c: input char
- * Return: 1 if true or 0 or not
- */
-int isSpace(char c)
-{
-	return (c == ' ');
-}
-
-/**
- * startIndex - returns first index of non-space char
- * @s: input string
- * @index: starting index
- * Return: index of first non-space char
- */
-int startIndex(char *s, int index)
-{
-
-	while (isSpace(*(s + index)))
-		index++;
-	return (index);
-}
-
-/**
- * endIndex - returns last index of non-space char
- * @s: input string
- * @index: starting index
- * Return: index of last index of non-space char
- */
-int endIndex(char *s, int index)
-{
-	while (!isSpace(*(s + index)))
-		index++;
-	return (index);
-}
-
-/**
- * countWords - counts numbers of words in string
- * @s: input string
- * Return: number of words
- */
-int countWords(char *s)
-{
-	int wordOn = 0;
-	int words = 0;
-
-	while (*s)
-	{
-		if (isSpace(*s) && wordOn)
-			wordOn = 0;
-		else if (!isSpace(*s) && !wordOn)
-		{
-			wordOn = 1;
-			words++;
-		}
-		s++;
-	}
-	return (words);
 }
