@@ -48,12 +48,13 @@ int startIndex(char *s, int index)
 	return (index);
 }
 
-	/**
-	 * endIndex - returns last index of non-space char
-	 * @s: input string
-	 * @index: starting index
-	 * Return: index of last index of non-space char
-	 */
+/**
+ * endIndex - returns last index of non-space char
+ * @s: input string
+ * @index: starting index
+ * Return: index of last index of non-space char
+ */
+
 int endIndex(char *s, int index)
 {
 	while (!isSpace(*(s + index)))
