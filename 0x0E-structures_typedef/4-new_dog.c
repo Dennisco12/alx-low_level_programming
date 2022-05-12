@@ -17,7 +17,7 @@ char *_copy(char *src)
 		return (NULL);
 	}
 
-	for (len = 0; src[len] != '\0'; len++);
+	for (len = 0; src[len] != '\0'; len++)
 
 	ptr = malloc(sizeof(char) * (len + 1));
 
