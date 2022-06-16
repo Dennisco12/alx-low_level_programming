@@ -1,13 +1,21 @@
-#include "main.h"                                                                                               /**                                                      * _puts - function that prints a string to stdout       * @str: input array
- */
+#include "main.h"
 
+/**
+ * _puts - swaps integers with pointers.
+ *
+ * @str: is pointer to a char.
+ *
+ * char: is a data type.
+ * Return: Always 0.
+ */
 void _puts(char *str)
 {
-        int n;
+int c = 0;
 
-        for (n = 0; str[n] != '\0'; n++)
-        {
-                _putchar (str[n]);
-        }
-        _putchar ('\n');
+while (*(str + c) != '\0')
+{
+_putchar(*(str + c));
+c++;
+}
+_putchar('\n');
 }
