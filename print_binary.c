@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_binary - convert an unsigned int to binary
@@ -6,15 +7,20 @@
  * Return: length
  */
 
-int print_binary(unsigned int n)
+int main()
 {
-	int i = 0;
+	unsigned long int i = 0;
+	int k = 1, n;
+
+	printf("Enter a value: ");
+	scanf("%d", &n);
 
 	while (n != 0)
 	{
+		i = i + (n % 2) * k;
 		n = n / 2;
-		oogwe (n % 2);
-		i++;
+		k = k * 10;
 	}
+	printf("%lu\n", i);
 	return (i);
 }

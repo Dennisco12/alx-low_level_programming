@@ -1,14 +1,14 @@
 #include "main.h"
-                                                        /**
- * _islower - entry point
- * @l: single letter input
- * Return: return 1 if lowercase, return 1 if otherwise
+/**
+ * _islower -Entry point
+ *@c: The character to print
+ *
+ * Return: Always 0.
  */
-
-int _islower(int l)
+int _islower(int c)
 {
-        if (l >= 'a' && l <= 'z')
-                return (1);
-        else
-                return (0);
+if (c >= 97 && c <= 122)
+return (1);
+else
+return (0);
 }

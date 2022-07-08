@@ -1,14 +1,14 @@
-#include "main.h"                                       
+#include "main.h"
 /**
- * _isalpha - all entry point
- * @l: input value
- * Return: 1 if value is a char, return 0 if otherwise
+ * _isalpha -Entry point
+ *@c: The character to print
+ *
+ * Return: Always 0.
  */
-
-int _isalpha(int l)
+int _isalpha(int c)
 {
-        if (((l >= 'a') && (l <= 'z')) || ((l >= 'A') && (l <= 'Z')))
-                return (1);
-        else
-                return (0);
+if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+return (1);
+else
+return (0);
 }
