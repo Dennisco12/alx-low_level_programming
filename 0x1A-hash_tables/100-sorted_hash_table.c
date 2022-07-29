@@ -51,7 +51,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	n = ht->size;
 	key_copy = strdup(key);
 	value_copy = strdup(value);
-	idx = key_index(key_copy, n);
+	idx = key_index((const unsigned char *)key_copy, n);
 
 	node->key = key_copy;
 	node->value = value_copy;
@@ -106,13 +106,13 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-	unsigned long int n, idx, i;
+	unsigned long int n, idx;
 	shash_node_t *node;
 	char *key_copy;
 
 	n = ht->size;
 	key_copy = strdup(key);
-	idx = key_index(key_copy, n);
+	idx = key_index((const unsigned char *)key_copy, n);
 
 	node = ht->array[idx];
 	while (node != NULL)
