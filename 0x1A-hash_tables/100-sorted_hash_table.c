@@ -29,6 +29,15 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (new_hash);
 }
 
+
+/**
+ * shash_table_set - This adds a key/value pair to the
+ * appropriate position on a hash table
+ * @ht: The hash table
+ * @key: The key to be added
+ * @value: The value corresponding to the key
+ * Return: 1 if success and 0 if otherwise
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int n, idx, i;
@@ -89,6 +98,12 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 
 
+/**
+ * shash_table_get - The return the value of the given key
+ * @ht: The hash table
+ * @key: The key to be searched
+ * Return: The string value corresponding to the given key
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int n, idx, i;
@@ -109,6 +124,11 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (NULL);
 }
 
+
+/**
+ * shash_table_print - This prints a hash table
+ * @ht: The hash table
+ */
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *node;
@@ -126,6 +146,10 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 
+/**
+ * shash_table_print_rev - This print a sorted hash table in reversed order
+ * @ht: The sorted hash table
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *node;
@@ -143,6 +167,10 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 
+/**
+ * shash_table_delete - This deletes a hash table
+ * @ht: The sorted hash table
+ */
 void shash_table_delete(shash_table_t *ht)
 {
 	shash_node_t *temp, *node;
@@ -158,23 +186,4 @@ void shash_table_delete(shash_table_t *ht)
 	}
 	free(node);
 	free(ht);
-}
-
-
-int main(void)
-{
-	shash_table_t *ht;
-	char *value;
-	int i;
-
-	ht = shash_table_create(1024);
-	shash_table_set(ht, "y", "0");
-	shash_table_set(ht, "d", "fine boy");
-	shash_table_set(ht, "w", "pro");
-	shash_table_set(ht, "g", "f");
-	shash_table_set(ht, "s", "l");
-	shash_table_print(ht);
-	shash_table_delete(ht);
-	shash_table_print_rev(ht);
-	return (0);
 }
