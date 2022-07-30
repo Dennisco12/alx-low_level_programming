@@ -71,21 +71,13 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			node->snext = head;
 			head->sprev = node;
 			ht->shead = node;
-			printf("%s has been inserted in the front\n", node->key);
 		}
-		/*else if (strcmp(head->key, ht->stail->key) < 0)
-		{
-			node->sprev = node;
-			head->snext = node;
-			ht->stail = node;
-		}*/
 		else if (strcmp(ht->stail->key, key) < 0)
 		{
 			node->sprev = ht->stail;
 			node->snext = NULL;
 			ht->stail->snext = node;
 			ht->stail = node;
-			printf("%s will be after the last node\n", node->key);
 		}
 		else
 		{
@@ -93,7 +85,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			node->snext = head;
 			(head->sprev)->snext = node;
 			head->sprev = node;
-			printf("%s has been inserted somewhere in the middle\n", node->key);
 		}
 	}
 
