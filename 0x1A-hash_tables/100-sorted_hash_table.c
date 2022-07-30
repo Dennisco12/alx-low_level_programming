@@ -40,8 +40,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int n, idx, i;
-	char *key_copy, *value_copy;
+	unsigned long int n, idx;
 	shash_node_t *node, *head, *exist;
 
 	node = malloc(sizeof(shash_node_t));
@@ -49,12 +48,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	n = ht->size;
-	key_copy = strdup(key);
-	value_copy = strdup(value);
-	idx = key_index((const unsigned char *)key_copy, n);
-
-	node->key = key_copy;
-	node->value = value_copy;
+	idx = key_index((const unsigned char *)key, n);
+	node->key = strdup(key);
+	node->value = strdup(value);
 	node->next = NULL;
 
 	if (ht->shead == NULL)
@@ -67,34 +63,53 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		head = ht->shead;
-		while (head->snext != NULL)
+		while (strcmp(head->key, key) < 0 && head->snext != NULL)
 			head = head->snext;
-
-		head->snext = node;
-		node->sprev = head;
-		node->snext = NULL;
-		ht->stail = node;
-	}
-
-	i = 0;
-	while (i < n)
-	{
-		if (i == idx)
+		if (head == ht->shead)
 		{
-			if (ht->array[i] != NULL)
-			{
-				exist = ht->array[i];
-				while (exist != NULL)
-					exist = exist->next;
-				exist->next = node;
-				return (1);
-			}
-			ht->array[i] = node;
-			return (1);
+			node->sprev = NULL;
+			node->snext = head;
+			head->sprev = node;
+			ht->shead = node;
+			printf("%s has been inserted in the front\n", node->key);
 		}
-		i++;
+		/*else if (strcmp(head->key, ht->stail->key) < 0)
+		{
+			node->sprev = node;
+			head->snext = node;
+			ht->stail = node;
+		}*/
+		else if (strcmp(ht->stail->key, key) < 0)
+		{
+			node->sprev = ht->stail;
+			node->snext = NULL;
+			ht->stail->snext = node;
+			ht->stail = node;
+			printf("%s will be after the last node\n", node->key);
+		}
+		else
+		{
+			node->sprev = head->sprev;
+			node->snext = head;
+			(head->sprev)->snext = node;
+			head->sprev = node;
+			printf("%s has been inserted somewhere in the middle\n", node->key);
+		}
 	}
-	return (0);
+
+	if (ht->array[idx] != NULL)
+	{
+		exist = ht->array[idx];
+		while (exist->next != NULL)
+			exist = exist->next;
+		exist->next = node;
+		return (1);
+	}
+	else
+	{
+		ht->array[idx] = node;
+		return (1);
+	}
 }
 
 
