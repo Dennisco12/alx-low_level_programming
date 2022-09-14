@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A function that computes the perimeter of an island"""
 
+
 def island_perimeter(grid):
     """grid is a list of list of integers
     0 represents a water zone
@@ -26,7 +27,7 @@ def island_perimeter(grid):
                     perimeter -= 1
 
                 """land by the right"""
-                if (j != len(n) -1 and grid[i - 1][j + 1] == 1):
+                if (j != len(n) - 1 and grid[i - 1][j + 1] == 1):
                     perimeter -= 1
 
                 """land by the left"""
