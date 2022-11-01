@@ -37,7 +37,7 @@ int exponential_search(int *array, size_t size, int value)
  * @low: The index of the lower value to search
  * @high: The index of the higher value to search
  * @value: the value been searched
- * @Return: the index of value if found, -1 if otherwise
+ * Return: the index of value if found, -1 if otherwise
  */
 
 int binary_recursive_search(int *array, size_t low, size_t high, int value)
